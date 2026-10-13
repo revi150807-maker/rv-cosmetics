@@ -1,9 +1,3 @@
-/* =====================================================================
-   RV COSMETICS - style.css (dipanggil dari index.html)
-   Urutan: 1 Variabel  2 Dasar  3 Komponen  4 Halaman  5 Responsif
-   ===================================================================== */
-
-/* ---------- 1. Variabel warna & ukuran ---------- */
 :root{
   --pink:#FFC6C6;        /* header */
   --soft:#F9DCDA;        /* kartu, input, tombol */
@@ -15,7 +9,6 @@
   --sans:'ABeeZee',Arial,sans-serif;
 }
 
-/* ---------- 2. Dasar ---------- */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
 body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.3}
@@ -28,16 +21,13 @@ svg.i{display:block;fill:none;stroke:currentColor;stroke-width:2.2;stroke-lineca
 .screen{display:none;min-height:100vh;min-height:100dvh}
 .screen.active{display:block}
 
-/* ---------- 3. Komponen bersama ---------- */
 .brand{font-family:var(--serif);font-weight:700;line-height:1.15}
 
-/* header besar: login, data diri, sukses */
 .hero{background:var(--pink);display:flex;align-items:center;gap:clamp(14px,4vw,28px);
   height:clamp(130px,26vw,190px);padding:0 clamp(20px,8vw,120px)}
 .hero img{height:75%;width:auto;aspect-ratio:1;object-fit:contain}
 .hero .brand{font-size:clamp(1.5rem,5.5vw,2.4rem)}
 
-/* header kecil: product, discount, my order */
 .nav{background:var(--pink);height:clamp(64px,13vw,76px);display:flex;align-items:center;
   gap:clamp(12px,4vw,28px);padding:0 clamp(16px,4vw,40px)}
 .nav-links{display:flex;gap:clamp(12px,4vw,28px);font-family:var(--serif);font-weight:700;font-size:clamp(.8rem,2.6vw,1rem)}
@@ -59,7 +49,6 @@ svg.i{display:block;fill:none;stroke:currentColor;stroke-width:2.2;stroke-lineca
 .next svg{width:56px;height:30px;stroke-width:5}
 .next-wrap{display:flex;padding:24px clamp(14px,3vw,32px) 28px}
 
-/* kartu produk (Product & Discount) */
 .grid{display:grid;gap:clamp(20px,5vw,40px);width:min(100%,1000px);margin:0 auto;padding:0 clamp(20px,6vw,44px)}
 .prod{background:var(--soft);border:3px solid var(--ink);border-radius:12px;overflow:hidden}
 .prod .pic{height:clamp(96px,26vw,150px);display:flex;align-items:center;justify-content:center;
@@ -70,9 +59,6 @@ svg.i{display:block;fill:none;stroke:currentColor;stroke-width:2.2;stroke-lineca
 .prod .price{font-size:clamp(1rem,3.2vw,1.2rem)}
 .prod .old{display:block;font-size:.8rem;text-decoration:line-through;margin-top:2px}
 
-/* ---------- 4. Halaman ---------- */
-
-/* LOGIN */
 .avatar{width:100px;height:94px;border-radius:50px;background:var(--soft);margin:clamp(70px,16vw,140px) auto 0;
   display:flex;align-items:center;justify-content:center}
 .avatar svg{width:70px;height:70px;stroke-width:2.2}
@@ -82,7 +68,7 @@ svg.i{display:block;fill:none;stroke:currentColor;stroke-width:2.2;stroke-lineca
 .field::placeholder{color:var(--ink);opacity:1}
 .forget{display:inline-block;font-size:.8rem;margin:-14px 0 36px 30px;text-decoration:none}
 
-/* HOME: sidebar kiri + konten kanan */
+
 .home.active{display:grid;grid-template-columns:var(--sidebar) 1fr;grid-template-rows:auto 1fr}
 .home.menu-closed{grid-template-columns:0 1fr}
 .sidebar{grid-row:1 / 3;background:var(--soft);overflow:hidden;min-width:0}
@@ -109,7 +95,7 @@ svg.i{display:block;fill:none;stroke:currentColor;stroke-width:2.2;stroke-lineca
 .card .pic img{max-height:100%;width:auto;object-fit:contain}
 .card p{font-size:clamp(.78rem,2.5vw,.92rem);line-height:1.4;margin-top:12px}
 
-/* MY ORDER */
+
 .items{display:flex;flex-direction:column;gap:clamp(20px,5vw,36px);width:min(100%,720px);margin:0 auto;padding:0 clamp(20px,6vw,40px)}
 .item{display:flex;align-items:center;gap:clamp(14px,4vw,28px)}
 .item .pic{flex:none;width:clamp(100px,30vw,160px);aspect-ratio:6/7;background:var(--soft);border:2px solid var(--white);
@@ -121,14 +107,13 @@ svg.i{display:block;fill:none;stroke:currentColor;stroke-width:2.2;stroke-lineca
 .total{width:min(100%,720px);margin:0 auto;padding:18px clamp(20px,6vw,40px) 26px;text-align:right;font-size:clamp(1rem,3.2vw,1.15rem)}
 .btn.wide{width:clamp(180px,55%,260px);padding:14px 0;font-size:clamp(1.1rem,3.4vw,1.35rem);margin-bottom:60px}
 
-/* PERSONAL DATA */
+
 .form{width:min(100%,620px);margin:0 auto;padding:0 clamp(16px,5vw,20px) 20px}
 .form label{display:block;font-size:.85rem;margin:24px 0 2px 32px}
 .form input{display:block;width:100%;height:clamp(56px,15vw,66px);background:var(--soft);border:1.5px solid var(--ink);
   border-radius:34px;padding:0 24px}
 .form .btn{margin-top:36px;margin-bottom:60px}
 
-/* ORDER SUCCESSFUL */
 .success{background:linear-gradient(#fff 0%,#fdecec 40%,#fbc4c4 75%,#fdd9d9 100%)}
 .back{display:flex;align-items:center;gap:12px;font-size:1.4rem;padding:16px clamp(12px,4vw,32px)}
 .back svg{width:52px;height:30px;stroke-width:5}
@@ -140,20 +125,16 @@ svg.i{display:block;fill:none;stroke:currentColor;stroke-width:2.2;stroke-lineca
 .success{padding-bottom:80px}
 .btn.finish{background:#F7BFBC;margin-top:clamp(60px,14vw,100px)}
 
-/* ---------- 5. Responsif ---------- */
-/* HP (default): Product 2 kolom, Discount 2 kolom */
 #productGrid,#discountGrid{grid-template-columns:repeat(2,1fr)}
 .filter{display:flex;gap:14px;align-items:center;width:min(100%,1000px);margin:0 auto 36px;padding:0 clamp(16px,4vw,44px)}
 .filter span{font-size:clamp(1.1rem,4vw,1.4rem)}
 .filter input{flex:1;min-width:0;height:48px;border:3px solid var(--ink);border-radius:10px;padding:0 18px;font-size:1.05rem;background:#fff}
 
-/* Tablet >= 640px */
 @media (min-width:640px){
   #discountGrid{grid-template-columns:repeat(3,1fr)}
   .login-form{margin-top:90px}
 }
 
-/* Laptop >= 960px */
 @media (min-width:960px){
   #productGrid{grid-template-columns:repeat(4,1fr)}
   .prod .pic{height:170px}
