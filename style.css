@@ -1,12 +1,12 @@
 :root{
-  --pink:#FFC6C6;        /* header */
-  --soft:#F9DCDA;        /* kartu, input, tombol */
-  --pink-deep:#F3A5A5;   /* hiasan */
-  --paper:#FFF6F5;       /* latar tipis */
-  --ink:#111;            /* teks & garis */
+  --pink:#FFC6C6;        
+  --soft:#F9DCDA;        
+  --pink-deep:#F3A5A5;   
+  --paper:#FFF6F5;       
+  --ink:#111;            
   --white:#fff;
-  --red:#E8211F;         /* ikon centang sukses */
-  --red-deep:#C9171B;    /* label diskon & pesan salah */
+  --red:#E8211F;         
+  --red-deep:#C9171B;    
   --sidebar:clamp(128px,38vw,280px);
   --serif:'DM Serif Display',Georgia,serif;
   --sans:'ABeeZee',Arial,sans-serif;
